@@ -4,11 +4,12 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+
 	_ "github.com/lib/pq"
 )
 
 const (
-	dbHost     = "db"
+	dbHost     = "postgreDB_service2"
 	dbPort     = 5432
 	dbUser     = "postgres"
 	dbPassword = "postgres"
