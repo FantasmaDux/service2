@@ -17,12 +17,12 @@ services:
     container_name: postgreDB_service2
     restart: unless-stopped
     environment:
-      - DB_HOST=postgreDB_service2
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=testdb
+      - DB_HOST={DB_HOST}
+      - POSTGRES_USER={POSTGRES_USER}
+      - POSTGRES_PASSWORD={POSTGRES_PASSWORD}
+      - POSTGRES_DB={POSTGRES_DB}
     ports:
-      - '5431:5432'
+      - '{DB_SERVICE2_EXTERNAL_PORT}:{DB_SERVICE2_INTERNAL_PORT}'
     volumes:
       - ./postgresql:/var/lib/postgresql/data
     networks:
